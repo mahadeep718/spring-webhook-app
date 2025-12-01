@@ -23,6 +23,7 @@ app:
 
 Place your actual SQL solutions in:
 - `src/main/resources/sql/question1.sql` (odd)
+-  `src/main/resources/sql/question2.sql` (even)
 
 
 ## Build and Run
