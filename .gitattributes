@@ -1,0 +1,8 @@
+# Normalize line endings to prevent mvnw issues on Linux runners
+mvnw text eol=lf
+mvnw.cmd text eol=crlf
+
+# Common scripts/configs should use LF in CI
+*.sh text eol=lf
+*.yml text eol=lf
+*.yaml text eol=lf
