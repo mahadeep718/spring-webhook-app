@@ -1,0 +1,11 @@
+app:
+  name: "Mahadeep"
+  regNo: "22bce8813"
+  email: "mahadeep@example.com"
+  endpoints:
+    generateWebhook: "https://bfhldevapigw.healthrx.co.in/hiring/generateWebhook/JAVA"
+    fallbackWebhook: "https://bfhldevapigw.healthrx.co.in/hiring/testWebhook/JAVA"
+
+spring:
+  main:
+    web-application-type: none

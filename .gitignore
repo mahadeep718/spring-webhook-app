@@ -1,0 +1,11 @@
+# Exclude local Maven bootstrap and archives
+.maven/
+.maven/*.zip
+
+# OS/editor files
+.DS_Store
+Thumbs.db
+.vscode/
+
+# Keep build outputs; we want the JAR included
+# (Do NOT ignore target/)
