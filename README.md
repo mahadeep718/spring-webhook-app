@@ -30,7 +30,7 @@ Place your actual SQL solutions in:
 Requires Java 17 and Maven.
 
 ```bash
-mvn -q -DskipTests package
+./mvnw -q -DskipTests package   # uses Maven Wrapper
 java -jar target/spring-webhook-app-1.0.0.jar
 ```
 
@@ -38,6 +38,7 @@ The app runs once, performs the workflow, and exits. Logs include the submission
 
 ## Public JAR Link
 - Raw downloadable JAR: `https://raw.githubusercontent.com/mahadeep718/spring-webhook-app/main/target/spring-webhook-app-1.0.0.jar`
+- GitHub Actions artifact: After each push to `main`, find the artifact named `spring-webhook-app-jar` in the latest run under the Actions tab.
 
 ## Submission Checklist
 - Repo pushed publicly under your account.
