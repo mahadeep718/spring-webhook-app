@@ -40,6 +40,16 @@ The app runs once, performs the workflow, and exits. Logs include the submission
 - Raw downloadable JAR: `https://raw.githubusercontent.com/mahadeep718/spring-webhook-app/main/target/spring-webhook-app-1.0.0.jar`
 - GitHub Actions artifact: After each push to `main`, find the artifact named `spring-webhook-app-jar` in the latest run under the Actions tab.
 
+## Release JAR (GitHub Releases)
+- Create a version tag to trigger a release build and upload the JAR automatically:
+
+```bash
+git tag v1.0.0
+git push origin v1.0.0
+```
+
+- After the workflow finishes, the JAR will be attached to the GitHub Release for that tag on the repo’s Releases page.
+
 ## Submission Checklist
 - Repo pushed publicly under your account.
 - Built JAR included in `target/`.
