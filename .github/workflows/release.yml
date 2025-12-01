@@ -22,14 +22,20 @@ jobs:
           cache: 'maven'
 
       - name: Ensure mvnw is executable
-        run: chmod +x mvnw
+        run: |
+          if [ -f mvnw ]; then chmod +x mvnw; else echo "mvnw not found"; fi
 
       - name: Normalize mvnw line endings
-        run: sed -i 's/\r$//' mvnw
+        run: |
+          if [ -f mvnw ]; then sed -i 's/\r$//' mvnw; fi
+
+      - name: Install Maven if mvnw missing
+        run: |
+          if [ ! -f mvnw ]; then sudo apt-get update && sudo apt-get install -y maven; fi
 
       - name: Build with Maven Wrapper
         run: |
-          ./mvnw -q -DskipTests package
+          if [ -f mvnw ]; then ./mvnw -q -DskipTests package; else mvn -B -q -DskipTests package; fi
 
       - name: Create GitHub Release and Upload JAR
         uses: softprops/action-gh-release@v1
