@@ -22,11 +22,10 @@ jobs:
 
       - name: Build with Maven Wrapper
         run: |
-          cd spring-webhook-app
           ./mvnw -q -DskipTests package
 
       - name: Upload JAR artifact
         uses: actions/upload-artifact@v4
         with:
           name: spring-webhook-app-jar
-          path: spring-webhook-app/target/spring-webhook-app-1.0.0.jar
+          path: target/spring-webhook-app-1.0.0.jar
